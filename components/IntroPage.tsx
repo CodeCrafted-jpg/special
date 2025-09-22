@@ -15,7 +15,7 @@ const IntroPage = () => {
     const doneTimeout = setTimeout(() => setStep('done'), 4500);
 
     // Then redirect to love page
-    const redirectTimeout = setTimeout(() => router.push('/special'), 6500);
+    const redirectTimeout = setTimeout(() => router.push('/special'), 8500);
 
     return () => {
       clearTimeout(revealTimeout);
