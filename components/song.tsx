@@ -23,44 +23,44 @@ export const GlassKaraokeFrame = ({
 
   // Default lyrics structure (same timing as your original)
   const defaultLyrics = [
-    { time: 0.0, text: "I found a love for me" },
-    { time: 9.0, text: "Darling, just dive right in and follow my lead" },
-    { time: 16.0, text: "Well, I found a girl, beautiful and sweet" },
-    { time: 24.0, text: "Oh, I never knew you were the someone waiting for me" },
-    { time: 32.0, text: "'Cause we were just kids when we fell in love" },
-    { time: 35.0, text: "Not knowing what it was" },
-    { time: 39.0, text: "I will not give you up this time" },
-    { time: 49.0, text: "Darling, just kiss me slow" },
-    { time: 51.0, text: "Your heart is all I own" },
-    { time: 55.0, text: "And in your eyes, you're holding mine" },
-    { time: 61.0, text: "Baby, I'm dancing in the dark with you between my arms" },
-    { time: 72.0, text: "Barefoot on the grass, listening to our favorite song" },
-    { time: 80.0, text: "When you said you looked a mess" },
-    { time: 84.0, text: "I whispered underneath my breath" },
-    { time: 88.0, text: "But you heard it" },
-    { time: 92.0, text: "Darling, you look perfect tonight" },
-    { time: 96.0, text: "Well, I found a woman, stronger than anyone I know" },
-    { time: 104.0, text: "She shares my dreams, I hope that someday I'll share her home" },
-    { time: 112.0, text: "I found a love to carry more than just my secrets" },
-    { time: 118.0, text: "To carry love, to carry children of our own" },
-    { time: 125.0, text: "We are still kids, but we're so in love" },
-    { time: 131.0, text: "Fighting against all odds" },
-    { time: 135.0, text: "I know we'll be alright this time" },
-    { time: 142.0, text: "Darling, just hold my hand" },
-    { time: 146.0, text: "Be my girl, I'll be your man" },
-    { time: 150.0, text: "I see my future in your eyes" },
-    { time: 157.0, text: "Baby, I'm dancing in the dark with you between my arms" },
-    { time: 165.0, text: "Barefoot on the grass, listening to our favorite song" },
-    { time: 173.0, text: "When I saw you in that dress, looking so beautiful" },
-    { time: 179.0, text: "I don't deserve this" },
-    { time: 182.0, text: "Darling, you look perfect tonight" },
-    { time: 192.0, text: "Baby, I'm dancing in the dark with you between my arms" },
-    { time: 200.0, text: "Barefoot on the grass, listening to our favorite song" },
-    { time: 208.0, text: "I have faith in what I see" },
-    { time: 212.0, text: "Now I know I have met an angel in person" },
-    { time: 218.0, text: "And she looks perfect" },
-    { time: 222.0, text: "I don't deserve this" },
-    { time: 226.0, text: "You look perfect tonight" }
+    { time: 0.0, text: "I found a love for me ❤️" },
+    { time: 9.0, text: "Darling, just dive right in and follow my lead 😊" },
+    { time: 16.0, text: "Well, I found a girl, beautiful and sweet 🍫" },
+    { time: 24.0, text: "Oh, I never knew you were the someone waiting for me 🥺" },
+    { time: 32.0, text: "'Cause we were just kids when we fell in love 💗" },
+    { time: 35.0, text: "Not knowing what it was 🥺" },
+    { time: 39.0, text: "I will not give you up this time ⌛" },
+    { time: 49.0, text: "Darling, just kiss me slow 💏" },
+    { time: 51.0, text: "Your heart is all I own ❤️" },
+    { time: 55.0, text: "And in your eyes, you're holding mine 😊" },
+    { time: 61.0, text: "Baby, I'm dancing in the dark with you between my arms 💃" },
+    { time: 72.0, text: "Barefoot on the grass, listening to our favorite song 🎶" },
+    { time: 80.0, text: "When you said you looked a mess ❤️‍🩹" },
+    { time: 84.0, text: "I whispered underneath my breath 🫁" },
+    { time: 88.0, text: "But you heard it 😊" },
+    { time: 92.0, text: "Darling, you look perfect tonight 💖" },
+    { time: 96.0, text: "Well, I found a woman, stronger than anyone I know 😊" },
+    { time: 104.0, text: "She shares my dreams, I hope that someday I'll share her home 🏠" },
+    { time: 112.0, text: "I found a love to carry more than just my secrets 💗" },
+    { time: 118.0, text: "To carry love, to carry children of our own 👩‍🍼" },
+    { time: 125.0, text: "We are still kids, but we're so in love 😜" },
+    { time: 131.0, text: "Fighting against all odds 🎶" },
+    { time: 135.0, text: "I know we'll be alright this time ⏲️" },
+    { time: 142.0, text: "Darling, just hold my hand 🫴" },
+    { time: 146.0, text: "Be my girl, I'll be your man 🧑‍🤝‍🧑" },
+    { time: 150.0, text: "I see my future in your eyes 😍" },
+    { time: 157.0, text: "Baby, I'm dancing in the dark with you between my arms 🩰" },
+    { time: 165.0, text: "Barefoot on the grass, listening to our favorite song 🎶" },
+    { time: 173.0, text: "When I saw you in that dress, looking so beautiful 👗" },
+    { time: 179.0, text: "I don't deserve this 👩‍🍼" },
+    { time: 182.0, text: "Darling, you look perfect tonight 💗" },
+    { time: 192.0, text: "Baby, I'm dancing in the dark with you between my arms 🫴" },
+    { time: 200.0, text: "Barefoot on the grass, listening to our favorite song 🎶" },
+    { time: 208.0, text: "I have faith in what I see 😚" },
+    { time: 212.0, text: "Now I know I have met an angel in person 🪽" },
+    { time: 218.0, text: "And she looks perfect 💓" },
+    { time: 222.0, text: "I don't deserve this 🧑‍🤝‍🧑" },
+    { time: 226.0, text: "You look perfect tonight 💝" }
   ];
 
   const activeLyrics = lyrics.length > 0 ? lyrics : defaultLyrics;
@@ -363,7 +363,7 @@ export const GlassKaraokeFrame = ({
 
       {!showLyrics || currentLyricIndex === -1 ? (
         <div className="glass-lyrics-container">
-          <h1 className="glass-song-title">{title}</h1>
+          <h1 className="glass-song-title">{title}-(Just Like You Are)</h1>
           <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.2rem", fontStyle: "italic" }}>
             by {artist}
           </p>
