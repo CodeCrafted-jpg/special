@@ -46,10 +46,22 @@ const App = () => {
 
     const backgroundThemes = [ 
         'linear-gradient(45deg, #ff4d6d, #ff758f, #ff99ac, #ff4d6d)', 
-        'linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)', 
-        'linear-gradient(45deg, #ffecd2, #fcb69f, #ff9a9e, #fad0c4)', 
-        'linear-gradient(45deg, #a8edea, #fed6e3, #ffeaa7, #fab1a0)', 
-        'linear-gradient(45deg, #d299c2, #fef9d7, #daa4de, #f093fb)' 
+  'linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)', 
+  'linear-gradient(45deg, #ffecd2, #fcb69f, #ff9a9e, #fad0c4)', 
+  'linear-gradient(45deg, #a8edea, #fed6e3, #ffeaa7, #fab1a0)', 
+  'linear-gradient(45deg, #d299c2, #fef9d7, #daa4de, #f093fb)', 
+
+  // new ones
+  'linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee)', 
+  'linear-gradient(45deg, #84fab0, #8fd3f4, #a1c4fd, #c2e9fb)', 
+  'linear-gradient(45deg, #ffdde1, #ee9ca7, #ffdde1, #ff9a9e)', 
+  'linear-gradient(45deg, #ff6a00, #ee0979, #ff6a00, #ff512f)', 
+  'linear-gradient(45deg, #36d1dc, #5b86e5, #6a11cb, #2575fc)', 
+  'linear-gradient(45deg, #fdfbfb, #ebedee, #d7d2cc, #304352)', 
+  'linear-gradient(45deg, #fffc00, #ffd200, #ff512f, #dd2476)', 
+  'linear-gradient(45deg, #43cea2, #185a9d, #2bc0e4, #eaecc6)', 
+  'linear-gradient(45deg, #30cfd0, #330867, #6a11cb, #2575fc)', 
+  'linear-gradient(45deg, #f7971e, #ffd200, #ff5858, #f09819)'
     ]; 
 
     // Helper to control the song modal
