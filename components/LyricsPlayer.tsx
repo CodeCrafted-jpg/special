@@ -17,7 +17,7 @@ const lyrics: LyricLine[] = [
   { time: 34, text: "[Chorus]" },
   { time: 35, text: "When all I dream of is your eyes" },
   { time: 37, text: "All I long for is your touch" },
-  { time: 42, text: "And, darling, something tells me that's enough," },
+  { time: 42, text: "And, darling, something tells me that's enough, mm-mm-mm-mm" },
   { time: 48.5, text: "You can say that I'm a fool" },
   { time: 52, text: "And I don't know very much" },
   { time: 55.7, text: "But I think they call this love" },
@@ -31,7 +31,7 @@ const lyrics: LyricLine[] = [
   { time: 87, text: "[Chorus]" },
   { time: 88, text: "When all I dream of is your eyes" },
   { time: 92, text: "All I long for is your touch" },
-  { time: 95.3, text: "And, darling, something tells me that's enough," },
+  { time: 95.3, text: "And, darling, something tells me that's enough, mm-mm-mm-mm" },
   { time: 102, text: "You can say that I'm a fool" },
   { time: 106.5, text: "And I don't know very much" },
   { time: 110.5, text: "But I think they call this love" },
@@ -40,7 +40,7 @@ const lyrics: LyricLine[] = [
   { time: 117, text: "Oh, I think they call this love" },
 
   { time: 120.0, text: "[Bridge]" },
-  { time: 113.2, text: "Hmm, ooh-ooh, mm" },
+  { time: 213.2, text: "Hmm, ooh-ooh, mm" },
   { time: 136.0, text: "What could this be" },
   { time: 138.2, text: "Between you and me? Oh, oh" },
 
@@ -56,7 +56,7 @@ const lyrics: LyricLine[] = [
   { time: 178.0, text: "This love ❤️" },
 
   { time: 183.5, text: "[Outro]" },
-  { time: 185.0, text: "This love ❤️" },
+  { time: 185.0, text: "This love" },
 ];
 
 interface LyricsPlayerProps {
@@ -231,18 +231,22 @@ const LyricsPlayer: React.FC<LyricsPlayerProps> = ({ videoUrl, audioSrc, onClose
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding: 20px;
+          padding: 10px;
+          overflow: hidden;
         }
         
         .player-controls {
           display: flex;
-          gap: 15px;
+          gap: 10px;
           align-items: center;
-          margin-bottom: 20px;
+          margin-bottom: 15px;
+          width: 100%;
+          max-width: 400px;
+          justify-content: center;
         }
         
         .play-btn, .close-btn {
-          padding: 10px 20px;
+          padding: 12px 24px;
           background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%);
           color: white;
           border: none;
@@ -251,12 +255,21 @@ const LyricsPlayer: React.FC<LyricsPlayerProps> = ({ videoUrl, audioSrc, onClose
           transition: all 0.3s;
           font-weight: 600;
           box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+          font-size: 16px;
+          touch-action: manipulation;
+          -webkit-tap-highlight-color: transparent;
         }
         
-        .play-btn:hover, .close-btn:hover {
-          background: linear-gradient(135deg, #ff1744 0%, #ff4d6d 100%);
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(255, 77, 109, 0.6);
+        .play-btn:active, .close-btn:active {
+          transform: scale(0.95);
+        }
+        
+        @media (hover: hover) {
+          .play-btn:hover, .close-btn:hover {
+            background: linear-gradient(135deg, #ff1744 0%, #ff4d6d 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 77, 109, 0.6);
+          }
         }
         
         .lyrics-container {
@@ -264,10 +277,12 @@ const LyricsPlayer: React.FC<LyricsPlayerProps> = ({ videoUrl, audioSrc, onClose
           width: 100%;
           max-width: 900px;
           overflow-y: auto;
+          overflow-x: hidden;
           text-align: center;
-          padding: 10px;
+          padding: 20px 15px;
           scrollbar-width: none;
           -ms-overflow-style: none;
+          -webkit-overflow-scrolling: touch;
         }
         
         .lyrics-container::-webkit-scrollbar {
@@ -289,7 +304,7 @@ const LyricsPlayer: React.FC<LyricsPlayerProps> = ({ videoUrl, audioSrc, onClose
           font-size: 2rem;
           font-weight: 700;
           opacity: 1;
-          animation: floatIn 0.9s ease-out;
+          animation: floatIn 0.8s ease-out;
           text-shadow: 0 0 20px rgba(135, 206, 235, 0.6);
         }
         
@@ -299,7 +314,7 @@ const LyricsPlayer: React.FC<LyricsPlayerProps> = ({ videoUrl, audioSrc, onClose
           font-size: 2.3rem;
           font-weight: 800;
           opacity: 1;
-          animation:  floatIn  0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55), glow 2s ease-in-out infinite;
+          animation: floatIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55), glow 2s ease-in-out infinite;
         }
         
         /* Verse 2 - Scale in with rotation */
@@ -308,7 +323,7 @@ const LyricsPlayer: React.FC<LyricsPlayerProps> = ({ videoUrl, audioSrc, onClose
           font-size: 2rem;
           font-weight: 700;
           opacity: 1;
-          animation: scaleIn 0.6s ease-out;
+          animation: floatIn 0.6s ease-out;
           text-shadow: 0 0 25px rgba(255, 160, 122, 0.7);
         }
         
