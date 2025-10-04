@@ -2,6 +2,7 @@
 
 import { redirect } from 'next/dist/server/api-utils';
 import { useRouter } from 'next/navigation';
+import LyricsPlayer from "./LyricsPlayer";
 import React, { useState, useEffect, useRef } from 'react'; 
 
 // Defining types for clarity
@@ -26,6 +27,7 @@ const App = () => {
     const [textSize, setTextSize] = useState(5); 
     const [backgroundTheme, setBackgroundTheme] = useState(0); 
     const [shakeScreen, setShakeScreen] = useState(false); 
+     const [showLyrics, setShowLyrics] = useState(false);
     const router=useRouter()
 
     // NEW: State and Ref for Song Player
@@ -572,6 +574,9 @@ const App = () => {
                     <button className="control-btn bg-pink-600 hover:bg-pink-700" onClick={()=>router.push("/newLove")}>
                         🎵 Our Song
                     </button>
+                    <button className="control-btn" onClick={() => setShowLyrics(true)}>
+        🎤 Karaoke
+      </button>
                 </div> 
 
                 {/* Click Counter */} 
@@ -629,11 +634,13 @@ const App = () => {
                 ))} 
 
                 {/* Mouse Trail */} 
-                {mouseTrail.map(trail => ( 
-                    <div key={trail.id} className="mouse-trail" 
-                        style={{left: trail.x - 7.5, top: trail.y - 7.5}} 
-                    /> 
-                ))} 
+               {mouseTrail.map((trail, index) => (
+  <div
+    key={`${trail.id}-${index}`}
+    className="mouse-trail"
+    style={{ left: trail.x - 7.5, top: trail.y - 7.5 }}
+  />
+))}
 
                 {/* Firework Particles */} 
                 {particles.map(p => ( 
@@ -648,6 +655,13 @@ const App = () => {
                     /> 
                 ))} 
             </div> 
+                {showLyrics && (
+      <LyricsPlayer
+        audioSrc="/love.mp3"   // or wherever your song is hosted
+        onClose={() => setShowLyrics(false)}
+      />
+    )}
+
 
             {/* Song Window Modal (NEW) */}
             {showSongModal && (

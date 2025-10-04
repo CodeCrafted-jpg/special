@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { GlassKaraokeFrame } from './song';
 
+
+
 const ILoveYouPage = () => {
   const [hearts, setHearts] = useState([]);
   const [sparkles, setSparkles] = useState([]);
@@ -17,6 +19,7 @@ const ILoveYouPage = () => {
   const [textSize, setTextSize] = useState(5);
   const [backgroundTheme, setBackgroundTheme] = useState(0);
   const [shakeScreen, setShakeScreen] = useState(false);
+ 
   const audioRef = useRef(null);
 
   const words = ['Love', 'Forever', 'Always', 'Beautiful', 'Amazing', 'Special', 'Darling', 'Sweetheart', 'Angel', 'Treasure'];
@@ -518,6 +521,7 @@ const ILoveYouPage = () => {
           <button className="control-btn" onClick={growText}>🔍 Grow Text</button>
           <button className="control-btn" onClick={changeBackgroundTheme}>🎨 Theme</button>
           <button className="control-btn" onClick={triggerFireworks}>🎆 Fireworks</button>
+          
         </div>
 
         {/* Click Counter */}
