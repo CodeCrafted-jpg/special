@@ -40,7 +40,7 @@ const lyrics: LyricLine[] = [
   { time: 117, text: "Oh, I think they call this love" },
 
   { time: 120.0, text: "[Bridge]" },
-  { time: 213.2, text: "Hmm, ooh-ooh, mm" },
+  { time: 123.2, text: "Hmm, ooh-ooh, mm" },
   { time: 136.0, text: "What could this be" },
   { time: 138.2, text: "Between you and me? Oh, oh" },
 
